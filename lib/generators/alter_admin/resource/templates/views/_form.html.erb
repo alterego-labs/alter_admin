@@ -1,0 +1,18 @@
+<% model_class = class_name.constantize  %>
+
+<%= "
+  <% #{model_class.name}AdminSetting.edit_columns.each do |name, info| %\>
+    <%= f.input name, info %\>
+    <% if (info[:as] == :file) && !f.object.new_record? %\>
+      <% url = f.object.send(name) %\>
+      <div class='preview-image col-md-offset-2'>
+        <%= image_tag(url) %\>
+      </div>
+    <% end %\>
+  <% end  %\>
+  <div class='row'>
+    <div class='col-md-8 col-md-offset-4'>
+      <%= f.button :submit, class: 'btn btn-info' %\>
+    </div>
+  </div>
+"%>

@@ -1,0 +1,23 @@
+<% model_class = class_name.constantize  %>
+<div class="page-header">
+  <h1 class="pull-left"><%= "<%= #{model_class}.model_name.human %\>" %>#<%= "<%= resource.id %\>" %></h1>
+  <div class="pull-right">
+    <%= "<%= link_to 'Назад', admin_#{plural_name}_path, class: 'btn btn-default' %\>" %>
+  </div>
+  <div class="pull-right">
+    <%= "<%= link_to 'Редактировать', edit_admin_#{plural_name.singularize}_path(resource), class: 'btn btn-info' %\>" %>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <tbody>
+    <%= "
+      <% #{model_class.name}AdminSetting.show_columns.each do |name, info| %\>
+        <tr>
+          <td><%= #{model_class.name}.human_attribute_name(name) %\></td>
+          <td><%= resource.send(name) %\></td>
+        </tr>
+      <% end %\>
+    "%>
+  </tbody>
+</table>

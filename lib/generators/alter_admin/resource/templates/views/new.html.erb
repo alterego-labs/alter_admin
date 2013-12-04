@@ -1,0 +1,15 @@
+<% model_class = class_name.constantize  %>
+<div class="page-header">
+  <h1 class="pull-left">Новый <%= "<%= #{model_class}.model_name.human %\>" %></h1>
+  <div class="pull-right">
+    <%= "<%= link_to 'Отмена', admin_#{plural_name}_path, class: 'btn btn-danger' %\>" %>
+  </div>
+</div>
+
+<%= "<%= error_messages_for resource  %\>" %>
+
+<%= "
+  <%= simple_form_for resource, url: admin_#{plural_name}_path do |f|%\>
+    <%= render 'form', f: f %\>
+  <% end %\>
+" %>
