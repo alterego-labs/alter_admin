@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = AlterAdmin::VERSION
   spec.authors       = ["sergio1990"]
   spec.email         = ["sergeg1990@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Simple admin panel generator with inherited resources, has_scope, datatables for Rails 4}
+  spec.summary       = spec.description
   spec.homepage      = ""
   spec.license       = "MIT"
 
