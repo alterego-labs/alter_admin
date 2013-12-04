@@ -1,6 +1,6 @@
 # AlterAdmin
 
-TODO: Write a gem description
+Simple admin panel generator with inherited resources, has_scope, datatables for Rails 4
 
 ## Installation
 
@@ -16,9 +16,27 @@ Or install it yourself as:
 
     $ gem install alter_admin
 
+Or if you want to stay on the edge:
+
+    gem 'alter_admin', github: 'sergio1990/alter_admin'
+
 ## Usage
 
-TODO: Write usage instructions here
+After installing gem you must to do some steps. _Lets go!_
+
+### Basic configuration
+
+At this step we creating layout, adding home controller, route to it, settings class and simple form settings.
+Run following command:
+
+    $ bundle exec rake alter_admin:install
+
+### Generate admin resource section
+
+This generator creates resource controller, all views, adds route and model admin settings class.
+Run following command:
+
+    $ bundle exec rake alter_admin:resource <model_name>
 
 ## Contributing
 

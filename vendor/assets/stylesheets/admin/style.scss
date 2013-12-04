@@ -1,0 +1,32 @@
+/*
+*= require bootstrap
+*= require dataTables/jquery.dataTables
+*= require dataTables/jquery.dataTables.bootstrap3
+*= require dataTables/jquery.dataTables.bootstrap3
+*= require styles
+*= require font-awesome
+*/
+
+
+form{
+  .form-group{
+    display: inline-block;
+    width: 100%;
+  }
+  .preview-image{
+    img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+.container{
+  width: 100% !important;
+}
+
+textarea{
+  &.h300{
+    height: 300px;
+  }
+}

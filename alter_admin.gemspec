@@ -8,16 +8,28 @@ Gem::Specification.new do |spec|
   spec.version       = AlterAdmin::VERSION
   spec.authors       = ["sergio1990"]
   spec.email         = ["sergeg1990@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Simple admin panel generator with inherited resources, has_scope, datatables for Rails 4}
+  spec.summary       = spec.description
   spec.homepage      = ""
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
+  spec.files         = Dir["{lib,vendor}/**/*"]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_runtime_dependency "rails", "~> 4.0"
+
+  spec.add_dependency "inherited_resources"
+  spec.add_dependency "has_scope"
+  spec.add_dependency "simple_form"
+  spec.add_dependency "jquery-datatables-rails"
+  spec.add_dependency "jquery-rails"
+  spec.add_dependency "twitter-bootstrap-rails"
+  spec.add_dependency "sprockets-rails"
+
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "sass-rails"
 end
