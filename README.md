@@ -29,14 +29,14 @@ After installing gem you must to do some steps. _Lets go!_
 At this step we creating layout, adding home controller, route to it, settings class and simple form settings.
 Run following command:
 
-    $ bundle exec rake alter_admin:install
+    $ rails g alter_admin:install
 
 ### Generate admin resource section
 
 This generator creates resource controller, all views, adds route and model admin settings class.
 Run following command:
 
-    $ bundle exec rake alter_admin:resource <model_name>
+    $ rails g alter_admin:resource <model_name>
 
 ## Contributing
 
