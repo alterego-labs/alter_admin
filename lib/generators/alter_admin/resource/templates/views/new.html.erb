@@ -9,7 +9,7 @@
 <%= "<%= error_messages_for resource  %\>" %>
 
 <%= "
-  <%= simple_form_for resource, url: admin_#{plural_name}_path do |f|%\>
+  <%= simple_form_for resource, url: admin_#{plural_name}_path, wrapper: :alter_admin_bootstrap3 do |f|%\>
     <%= render 'form', f: f %\>
   <% end %\>
 " %>
