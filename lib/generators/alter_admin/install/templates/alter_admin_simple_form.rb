@@ -27,7 +27,7 @@ end
 SimpleForm.setup do |config|
   config.boolean_style = :nested
 
-  config.wrappers :bootstrap3, tag: 'div', class: 'form-group', error_class: 'has-error',
+  config.wrappers :alter_admin_bootstrap3, tag: 'div', class: 'form-group', error_class: 'has-error',
                   defaults: { input_html: { class: 'default_class' } } do |b|
 
     b.use :html5
@@ -76,5 +76,5 @@ SimpleForm.setup do |config|
   # Check the Bootstrap docs (http://getbootstrap.com/)
   # to learn about the different styles for forms and inputs,
   # buttons and other elements.
-  config.default_wrapper = :bootstrap3
+  # config.default_wrapper = :bootstrap3
 end
