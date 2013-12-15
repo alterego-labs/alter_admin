@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <% AlterAdminSettings.registered_models.each do |model|  %>
+    <% AlterAdmin.config.registered_models.each do |model|  %>
       <tr>
         <td><%= model.model_name.human %></td>
         <td><%= model.count %></td>
