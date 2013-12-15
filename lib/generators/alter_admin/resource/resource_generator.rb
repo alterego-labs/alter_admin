@@ -23,7 +23,7 @@ module AlterAdmin
       end
 
       def add_model_admin_setting
-        template "model_setting.rb", File.join('app/admin', "#{file_name}_admin_setting.rb")
+        template "t_model_setting.rb", File.join('app/admin', "#{file_name}_admin_setting.rb")
       end
 
     end
