@@ -5,8 +5,8 @@ module AlterAdmin
     class InstallGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
 
-      def create_alter_admin_settings
-        copy_file 'alter_admin_settings.rb', File.join('lib', "alter_admin_settings.rb")
+      def create_alter_admin_initializer
+        copy_file 'alter_admin_initializer.rb', File.join('config/initializers', "alter_admin_initializer.rb")
       end
 
       def create_layout
