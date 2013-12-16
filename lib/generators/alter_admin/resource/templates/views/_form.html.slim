@@ -1,4 +1,4 @@
-- <% class_name %>AdminSetting.edit_columns.each do |name, info|
+- "#{resource_class}AdminSetting".constantize.edit_columns.each do |name, info|
   = f.input name, info
   - if (info[:as] == :file) && !f.object.new_record?
     - url = f.object.send(name)

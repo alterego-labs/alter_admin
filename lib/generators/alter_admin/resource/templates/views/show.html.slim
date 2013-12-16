@@ -1,0 +1,13 @@
+.page-header
+  h1.pull-left = "Просмотр #{resource.class.model_name.human} ##{resource.id}"
+  .pull-right
+    = link_to 'Назад', collection_path, class: 'btn btn-default'
+  .pull-right
+    = link_to 'Редактировать', edit_resource_path(resource), class: 'btn btn-info'
+
+table.table.table-bordered
+  tbody
+    - "#{resource_class.name}AdminSetting".constantize.show_columns.each do |name, info|
+      tr
+        td = resource_class.human_attribute_name(name)
+        td = resource.send(name)
