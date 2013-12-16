@@ -28,6 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "sprockets-rails"
   spec.add_runtime_dependency "activesupport"
   spec.add_runtime_dependency "cancan"
+  spec.add_runtime_dependency "slim"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

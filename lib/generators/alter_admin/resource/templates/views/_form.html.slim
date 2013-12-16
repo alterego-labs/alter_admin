@@ -1,0 +1,9 @@
+- "#{resource_class}AdminSetting".constantize.edit_columns.each do |name, info|
+  = f.input name, info
+  - if (info[:as] == :file) && !f.object.new_record?
+    - url = f.object.send(name)
+    .preview-image.col-md-offset-2
+      = image_tag(url)
+.row
+  .col-md-8.col-md-offset-4
+    = f.button :submit, class: 'btn btn-info'

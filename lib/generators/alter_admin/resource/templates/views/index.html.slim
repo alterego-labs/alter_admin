@@ -1,0 +1,22 @@
+.page-header
+  h1.pull-left = resource_class.model_name.human
+  .pull-right = link_to 'Создать', new_resource_path, class: 'btn btn-default'
+
+table.datatable
+  thead
+    tr
+      - "#{resource_class}AdminSetting".constantize.table_columns.each do |name, info|
+        th = resource_class.human_attribute_name(name)
+      th Операции
+  tbody
+    - resource_class.find_each do |model|
+      tr
+        - "#{resource_class}AdminSetting".constantize.table_columns.each do |name, info|
+          td = model.send(name)
+        td
+          = link_to resource_path(model) do
+            = fa_icon 'eye'
+          = link_to edit_resource_path(model) do
+            = fa_icon 'edit'
+          = link_to resource_path(model), method: :delete, confirm: 'Вы уверены?' do
+            = fa_icon 'trash-o'
