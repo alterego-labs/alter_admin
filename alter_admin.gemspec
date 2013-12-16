@@ -24,11 +24,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "simple_form"
   spec.add_runtime_dependency "jquery-datatables-rails"
   spec.add_runtime_dependency "jquery-rails"
-  spec.add_runtime_dependency "twitter-bootstrap-rails"
   spec.add_runtime_dependency "sprockets-rails"
   spec.add_runtime_dependency "activesupport"
   spec.add_runtime_dependency "cancan"
   spec.add_runtime_dependency "slim"
+  spec.add_runtime_dependency "font-awesome-rails", '~> 4.0'
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

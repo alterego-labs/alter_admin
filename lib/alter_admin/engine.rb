@@ -1,3 +1,9 @@
+require 'cancan'
+require 'jquery-datatables-rails'
+require 'font-awesome-rails'
+require 'slim'
+require 'simple_form'
+
 module AlterAdmin
   module Rails
     class Engine < ::Rails::Engine

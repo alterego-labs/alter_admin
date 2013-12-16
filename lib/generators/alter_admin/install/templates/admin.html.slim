@@ -19,11 +19,11 @@ html
           li: a href="/admin" Панель администрирования
           li.dropdown
             a.dropdown-toggle href="#" data-toggle="dropdown"
-              Разделы
+              = "Разделы"
               b.caret
             ul.dropdown-menu
               - AlterAdmin.config.registered_models.each do |model|
-                li: a href=send("admin_#{model.name.underscore.pluralize}_path")= model.model_name.human
+                li: a href=send("admin_#{model.name.underscore.pluralize}_path") = model.model_name.human
         ul.nav.navbar-nav.navbar-right
           li.dropdown
             a.dropdown-toggle href="#" data-toggle="dropdown"

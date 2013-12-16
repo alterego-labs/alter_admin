@@ -18,7 +18,7 @@ module AlterAdmin
       end
 
       def create_home_index_view
-        copy_file 'home_index.html.slim', File.join('app/views/admin/home', "home_index.html.slim")
+        copy_file 'home_index.html.slim', File.join('app/views/admin/home', "index.html.slim")
       end
 
       def add_route
