@@ -1,0 +1,9 @@
+.page-header
+  h1.pull-left = "Редактирование #{resource.class.model_name.human} ##{resource.id}"
+  .pull-right
+    = link_to 'Отмена', collection_path, class: 'btn btn-danger'
+
+== error_messages_for resource
+
+= simple_form_for resource, url: resource_path(resource), wrapper: :alter_admin_bootstrap3 do |f|
+  = render 'form', f: f

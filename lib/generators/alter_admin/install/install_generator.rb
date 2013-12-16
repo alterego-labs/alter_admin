@@ -10,7 +10,7 @@ module AlterAdmin
       end
 
       def create_layout
-        copy_file 'admin.html.erb', File.join('app/views/layouts', "admin.html.erb")
+        copy_file 'admin.html.slim', File.join('app/views/layouts', "admin.html.slim")
       end
 
       def create_home_controller
@@ -18,7 +18,7 @@ module AlterAdmin
       end
 
       def create_home_index_view
-        copy_file 'home_index.html.erb', File.join('app/views/admin/home', "home_index.html.erb")
+        copy_file 'home_index.html.slim', File.join('app/views/admin/home', "index.html.slim")
       end
 
       def add_route

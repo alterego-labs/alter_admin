@@ -18,12 +18,12 @@ module AlterAdmin
 
       def add_views
         %w{index edit new _form show}.each do |view|
-          template "views/#{view}.html.erb", File.join('app/views/admin', "#{file_name.pluralize}/#{view}.html.erb")
+          template "views/#{view}.html.slim", File.join('app/views/admin', "#{file_name.pluralize}/#{view}.html.slim")
         end
       end
 
       def add_model_admin_setting
-        template "model_setting.rb", File.join('app/admin', "#{file_name}_admin_setting.rb")
+        template "t_model_setting.rb", File.join('app/admin', "#{file_name}_admin_setting.rb")
       end
 
     end
