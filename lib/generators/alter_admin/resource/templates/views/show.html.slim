@@ -10,4 +10,4 @@ table.table.table-bordered
     - "#{resource_class.name}AdminSetting".constantize.show_columns.each do |name, info|
       tr
         td = resource_class.human_attribute_name(name)
-        td = resource.send(name)
+        td = AlterAdmin::ValueDecorator.render(resource, name, info)
