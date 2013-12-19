@@ -12,7 +12,7 @@ table.datatable
     - resource_class.find_each do |model|
       tr
         - "#{resource_class}AdminSetting".constantize.table_columns.each do |name, info|
-          td = model.send(name)
+          td = AlterAdmin::ValueDecorator.render(model, name, info)
         td
           = link_to resource_path(model) do
             = fa_icon 'eye'
