@@ -1,12 +1,12 @@
 .page-header
-  h1 Информация
+  h1 = t('alter_admin.dashboard.title')
 
 table.datatable
   thead
     tr
-      th Модель
-      th Количество
-      th Операции
+      th = t('alter_admin.dashboard.info_table.model')
+      th = t('alter_admin.dashboard.info_table.count')
+      th
   tbody
     - AlterAdmin.config.registered_models.each do |model|
       tr

@@ -1,7 +1,7 @@
 .page-header
-  h1.pull-left = "Редактирование #{resource.class.model_name.human} ##{resource.id}"
+  h1.pull-left = "#{t('alter_admin.resource.edit.title')} #{resource.class.model_name.human} ##{resource.id}"
   .pull-right
-    = link_to 'Отмена', collection_path, class: 'btn btn-danger'
+    = link_to t('alter_admin.resource.edit.cancel'), collection_path, class: 'btn btn-danger'
 
 == error_messages_for resource
 

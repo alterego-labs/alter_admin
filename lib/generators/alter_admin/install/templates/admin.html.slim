@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= "#{AlterAdmin.config.app_name} - Панель Администрирования"
+    title= "#{AlterAdmin.config.app_name} - #{t('alter_admin.subtitle')}"
     = stylesheet_link_tag    "admin/style", media: "all"
     = javascript_include_tag "admin/script"
     = csrf_meta_tags
@@ -9,14 +9,14 @@ html
     nav.navbar.navbar-inverse role="navigation"
       .navbar-header
         button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          span.sr-only Toggle navigation
+          span.sr-only = t('alter_admin.toggle_nav')
           span.icon-bar
           span.icon-bar
           span.icon-bar
         = link_to AlterAdmin.config.app_name, '/', class: 'navbar-brand'
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         ul.nav.navbar-nav
-          li: a href="/admin" Панель администрирования
+          li: a href="/admin" = t('alter_admin.subtitle')
           li.dropdown
             a.dropdown-toggle href="#" data-toggle="dropdown"
               = "Разделы"
@@ -30,7 +30,7 @@ html
               = current_user.to_s
               b.caret
             ul.dropdown-menu
-              li: a href=destroy_session_path data-method="delete" Выход
+              li: a href=destroy_session_path data-method="delete" = t('alter_admin.user_links.exit')
     #wrapper.container
       - flash.each do |type, msg|
         .bs-callout class="bs-callout-#{flash_type_convert(type)}"

@@ -1,0 +1,25 @@
+ru:
+  alter_admin:
+    subtitle: Панель Администрирования
+    toggle_nav: Меню
+    user_links:
+      exit: Выход
+    dashboard:
+      title: Главная
+      info_table:
+        model: Модель
+        count: Записей
+    resource:
+      index:
+        add_new: Создать
+        destroy_confirm: Вы уверены?
+      show:
+        title: Просмотр
+        back: Назад
+        edit: Редактировать
+      new:
+        title: Новый
+        cancel: Отмена
+      edit:
+        title: Редактирование
+        cancel: Отмена
