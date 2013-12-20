@@ -3,7 +3,8 @@ require "alter_admin/engine"
 
 module AlterAdmin
 
-  autoload :Config,      'alter_admin/config'
+  autoload :Config,              'alter_admin/config'
+  autoload :ValueDecorator,      'alter_admin/value_decorator'
 
   def self.config(&block)
     @config ||= ::AlterAdmin::Config.new
