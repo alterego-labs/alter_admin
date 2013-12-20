@@ -30,7 +30,7 @@ html
               = current_user.to_s
               b.caret
             ul.dropdown-menu
-              li: a href=destroy_session_path data-method="delete" = t('alter_admin.user_links.exit')
+              li: a href=send(AlterAdmin.config.user_session_destroy_path) data-method="delete" = t('alter_admin.user_links.exit')
     #wrapper.container
       - flash.each do |type, msg|
         .bs-callout class="bs-callout-#{flash_type_convert(type)}"

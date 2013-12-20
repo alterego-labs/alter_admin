@@ -7,4 +7,7 @@ AlterAdmin.config do |config|
   # Set list of models that will administrable
   config.registered_models = []
 
+  # Set destroy session path
+  config.user_session_destroy_path = :destroy_session_path
+
 end
