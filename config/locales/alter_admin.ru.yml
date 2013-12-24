@@ -15,8 +15,14 @@ ru:
           open_section: Открыть раздел
           create: Создать
     resource:
+      tabs:
+        list: Список
+        new: Создать
       index:
-        add_new: Создать
+        cogs:
+          show: Просмотр
+          edit: Редактировать
+          destroy: Удалить
         destroy_confirm: Вы уверены?
       show:
         title: Просмотр

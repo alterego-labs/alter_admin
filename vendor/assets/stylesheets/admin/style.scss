@@ -32,7 +32,8 @@ textarea{
   }
 }
 
-nav{
+
+nav[role='navigation']{
   border-radius: 0;
   &.navbar{
     margin-bottom: 0px;
