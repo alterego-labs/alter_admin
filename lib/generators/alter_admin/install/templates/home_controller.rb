@@ -15,6 +15,6 @@ class Admin::HomeController < ActionController::Base
   end
 
   def authorize_admin
-    redirect_to root_path, alert: "Вы не имеете прав для доступа к этой странице!" if cannot?(:access, :alter_admin)
+    redirect_to root_path, alert: I18n.t("alter_admin.alerts.cannot_access") if cannot?(:access, :alter_admin)
   end
 end

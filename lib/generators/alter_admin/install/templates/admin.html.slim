@@ -8,13 +8,13 @@ html
   body
     nav.navbar.navbar-default role="navigation"
       .navbar-header
-        button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-alter-admin-collapse"
           span.sr-only = t('alter_admin.toggle_nav')
           span.icon-bar
           span.icon-bar
           span.icon-bar
         = link_to AlterAdmin.config.app_name, '/', class: 'navbar-brand'
-      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      #bs-alter-admin-collapse.collapse.navbar-collapse
         ul.nav.navbar-nav
           li: a href="/admin" = t('alter_admin.subtitle')
           li.dropdown
