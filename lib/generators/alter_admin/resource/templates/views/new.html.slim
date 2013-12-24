@@ -1,7 +1,9 @@
 .page-header
   h1.pull-left = "#{t('alter_admin.resource.new.title')} #{resource_class.model_name.human}"
-  .pull-right
-    = link_to t('alter_admin.resource.new.cancel'), collection_path, class: 'btn btn-danger'
+
+ul.nav.nav-tabs
+  li = link_to t('alter_admin.resource.tabs.list'), collection_path
+  li.active = link_to t('alter_admin.resource.tabs.new'), '#'
 
 == error_messages_for resource
 

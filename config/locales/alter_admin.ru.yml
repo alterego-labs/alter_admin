@@ -1,5 +1,7 @@
 ru:
   alter_admin:
+    alerts:
+      cannot_access: Вы не имеете прав для доступа к этой странице!
     subtitle: Панель Администрирования
     toggle_nav: Меню
     user_links:
@@ -9,9 +11,18 @@ ru:
       info_table:
         model: Модель
         count: Записей
+        dropdown:
+          open_section: Открыть раздел
+          create: Создать
     resource:
+      tabs:
+        list: Список
+        new: Создать
       index:
-        add_new: Создать
+        cogs:
+          show: Просмотр
+          edit: Редактировать
+          destroy: Удалить
         destroy_confirm: Вы уверены?
       show:
         title: Просмотр
