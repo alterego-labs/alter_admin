@@ -9,6 +9,9 @@ ru:
       info_table:
         model: Модель
         count: Записей
+        dropdown:
+          open_section: Открыть раздел
+          create: Создать
     resource:
       index:
         add_new: Создать

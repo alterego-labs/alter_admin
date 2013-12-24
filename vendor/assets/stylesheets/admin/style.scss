@@ -21,10 +21,33 @@ form{
 
 .container{
   width: 100% !important;
+  .page-header{
+    margin-top: 0px;
+  }
 }
 
 textarea{
   &.h300{
     height: 300px;
+  }
+}
+
+nav{
+  border-radius: 0;
+  &.navbar{
+    margin-bottom: 0px;
+  }
+}
+
+.glyphicon{
+  margin-left: -14px;
+  margin-right: 3px;
+}
+
+table{
+  td{
+    &.w20{
+      width: 20px !important;
+    }
   }
 }
