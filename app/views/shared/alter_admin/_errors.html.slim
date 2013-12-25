@@ -1,0 +1,5 @@
+- if object.errors.full_messages.any?
+  .bs-callout.bs-callout-danger
+    h4 = t('alter_admin.flash.header.error')
+    - object.errors.full_messages.uniq.each do |msg|
+      div = msg

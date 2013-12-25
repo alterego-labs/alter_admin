@@ -1,5 +1,6 @@
 require "alter_admin/version"
 require "alter_admin/engine"
+require "alter_admin/view_helper"
 
 module AlterAdmin
 
@@ -12,4 +13,8 @@ module AlterAdmin
     block_given? ? yield(@config) : @config
   end
 
+end
+
+ActiveSupport.on_load(:action_view) do
+  include AlterAdmin::ViewHelper
 end
