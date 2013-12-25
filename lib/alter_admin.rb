@@ -5,6 +5,7 @@ module AlterAdmin
 
   autoload :Config,              'alter_admin/config'
   autoload :ValueDecorator,      'alter_admin/value_decorator'
+  autoload :ModelSetting,        'alter_admin/model_setting'
 
   def self.config(&block)
     @config ||= ::AlterAdmin::Config.new

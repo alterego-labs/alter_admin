@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'alter_admin/model_setting'
 require 'active_support/inflector'
 
-class SampleClassModelSetting < AlterAdmin::ModelSetting
+class SampleClassAdminSetting < AlterAdmin::ModelSetting
 end
 
 class SampleClass
@@ -13,7 +13,7 @@ describe AlterAdmin::ModelSetting do
   let(:column) { double(:column, name: :name, type: :string) }
   let(:columns_hash) { { name: { as: :string } } }
 
-  subject { SampleClassModelSetting }
+  subject { SampleClassAdminSetting }
 
   before do
     SampleClass.stub(:columns) { [column] }

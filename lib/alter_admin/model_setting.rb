@@ -2,7 +2,7 @@ module AlterAdmin
   class ModelSetting
 
     def self.model_class
-      self.name.gsub('ModelSetting', '').constantize
+      self.name.gsub('AdminSetting', '').constantize
     end
 
     def self.table_columns

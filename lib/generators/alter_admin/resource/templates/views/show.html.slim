@@ -1,5 +1,5 @@
 .page-header
-  h1.pull-left = "#{t('alter_admin.resource.show.title')} #{resource.class.model_name.human} ##{resource.id}"
+  h1 = "#{t('alter_admin.resource.show.title')} #{resource.class.model_name.human} ##{resource.id}"
 
 ul.nav.nav-tabs
   li = link_to t('alter_admin.resource.tabs.list'), collection_path

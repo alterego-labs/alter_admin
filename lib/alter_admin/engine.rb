@@ -3,6 +3,7 @@ require 'jquery-datatables-rails'
 require 'font-awesome-rails'
 require 'slim'
 require 'simple_form'
+require 'inherited_resources'
 
 module AlterAdmin
   module Rails
