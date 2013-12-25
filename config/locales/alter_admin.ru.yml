@@ -1,0 +1,39 @@
+ru:
+  alter_admin:
+    flash:
+      header:
+        error: Исправьте ошибки
+    alerts:
+      cannot_access: Вы не имеете прав для доступа к этой странице!
+    subtitle: Панель Администрирования
+    toggle_nav: Меню
+    user_links:
+      exit: Выход
+    dashboard:
+      title: Главная
+      info_table:
+        model: Модель
+        count: Записей
+        dropdown:
+          open_section: Открыть раздел
+          create: Создать
+    resource:
+      tabs:
+        list: Список
+        new: Создать
+      index:
+        cogs:
+          show: Просмотр
+          edit: Редактировать
+          destroy: Удалить
+        destroy_confirm: Вы уверены?
+      show:
+        title: Просмотр
+        back: Назад
+        edit: Редактировать
+      new:
+        title: Новый
+        cancel: Отмена
+      edit:
+        title: Редактирование
+        cancel: Отмена

@@ -1,13 +1,16 @@
 .page-header
-  h1.pull-left = "Просмотр #{resource.class.model_name.human} ##{resource.id}"
-  .pull-right
-    = link_to 'Назад', collection_path, class: 'btn btn-default'
-  .pull-right
-    = link_to 'Редактировать', edit_resource_path(resource), class: 'btn btn-info'
+  h1 = "#{t('alter_admin.resource.show.title')} #{resource.class.model_name.human} ##{resource.id}"
 
-table.table.table-bordered
+ul.nav.nav-tabs
+  li = link_to t('alter_admin.resource.tabs.list'), collection_path
+  li = link_to t('alter_admin.resource.tabs.new'), new_resource_path
+  li.active = link_to t('alter_admin.resource.tabs.show'), '#'
+
+table.table.table-bordered.table-striped
   tbody
     - "#{resource_class.name}AdminSetting".constantize.show_columns.each do |name, info|
       tr
         td = resource_class.human_attribute_name(name)
         td = AlterAdmin::ValueDecorator.render(resource, name, info)
+.pull-right
+  = link_to t('alter_admin.resource.show.edit'), edit_resource_path(resource), class: 'btn btn-info'

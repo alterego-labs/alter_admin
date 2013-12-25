@@ -1,7 +1,9 @@
 .page-header
-  h1.pull-left = "Новый #{resource_class.model_name.human}"
-  .pull-right
-    = link_to 'Отмена', collection_path, class: 'btn btn-danger'
+  h1 = "#{t('alter_admin.resource.new.title')} #{resource_class.model_name.human}"
+
+ul.nav.nav-tabs
+  li = link_to t('alter_admin.resource.tabs.list'), collection_path
+  li.active = link_to t('alter_admin.resource.tabs.new'), '#'
 
 == error_messages_for resource
 

@@ -5,5 +5,7 @@ module AlterAdmin
 
     attr_accessor :registered_models
 
+    attr_accessor :user_session_destroy_path
+
   end
 end
